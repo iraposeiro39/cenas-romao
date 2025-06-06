@@ -1,3 +1,4 @@
+#!/bin/python3
 import socket
 
 ip = "localhost"
@@ -15,7 +16,7 @@ while True:
     try:
         c, addr = s.accept()
         print("Mensagem addr: ", addr)
-        
+
         msg = c.recv(1024)
         print("mensagem c: ", msg)
 
