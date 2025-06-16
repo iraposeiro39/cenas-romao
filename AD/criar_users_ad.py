@@ -1,19 +1,15 @@
 #!/bin/python3
 ### Conexao com o server AD
-#
-# FALTA CENAS QUE NÃO PASSEI, BE CAREFUL
-#
-
 # Modulos 
 from ldap3 import Server, Connection, ALL, NTLM, MODIFY_REPLACE
-from ldap3.core.exceptions import LDA
+from ldap3.core.exceptions import LDAPException
 
 # Configuration
 DOMAIN_NAME = "ciseg.internal"
-DOMAIN_CONTROLLER = ""
-ADMIN_USERNAME = ""
-ADMIN_PASSWORD = ""
-BASE_DN = ""
+DOMAIN_CONTROLLER = "dc.ciseg.internal"
+ADMIN_USERNAME = "ciseg\\Administrator"
+ADMIN_PASSWORD = "User_!23"
+BASE_DN = "DC=ciseg,DC=internal"
 NEW_USER = "rogelio.rodrigues"
 NEW_USER_DN = f"CN={NEW_USER},CN=Users,{BASE_DN}"
 NEW_USER_PASSWORD = "User_!23"
